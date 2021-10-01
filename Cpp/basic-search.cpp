@@ -4,13 +4,15 @@
 using namespace std;
 
 int main()
-{
-    static int array[]{4,12,56,754,1235,435,64,1,2,3,4};
-    int size = sizeof(array)/sizeof(array[0]);
-    sort(array, array + size);
+{   int n;
+    cout<<"enter size of array:";
+    cin>>n;
+    int array[n];
+    cout<<"enter array elements";
+    for(int i=0;i<n;i++)
+       cin>>array[i];
     int x = 3;
-
-    for(int i = 0; i < size; i++) {
+    for(int i = 0; i < n; i++) {
         if (array[i] == x) {
             cout << "Fount at index: " << i;
         }
